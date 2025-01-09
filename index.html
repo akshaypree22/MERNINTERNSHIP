@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Developer Portfolio</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      background-color: #d08335;
+    }
+    header {
+      background-color: #333;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      margin-top: 10px;
+    }
+    nav a {
+      text-decoration: none;
+      color: white;
+      font-weight: bold;
+    }
+    section {
+      padding: 20px;
+    }
+    .hidden {
+      display: none;
+    }
+    #projects {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 15px;
+    }
+    .project {
+      background-color: rgb(206, 26, 26);
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      padding: 15px;
+      text-align: center;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+    .project:hover {
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    }
+    footer {
+      background-color: #777572;
+      color: white;
+      text-align: center;
+      padding: 10px;
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+    }
+    button {
+      padding: 10px 15px;
+      margin-top: 15px;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #0056b3;
+    }
+    img {
+      display: block;
+      margin: 0 auto 15px auto;
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+    }
+  </style>
+</head>
+'<body>
+  <header>
+    <h1>akshay</h1>
+    <p>Software Developer | JavaScript Enthusiast | Open Source Contributor</p>
+    <nav>
+      <a href="#" onclick="navigate('about')">About Me</a>
+      <a href="#" onclick="navigate('projects')">Projects</a>
+      <a href="#" onclick="navigate('contact')">Contact</a>
+    </nav>
+  </header>
+ d
+  <section id="about">
+    <h2>About Me</h2>
+    <img src="img1.jpg" alt="akshayPicture">
+    <p>Hello! I'm  akshay, a passionate software developer with expertise in JavaScript, React, and Node.js. I love creating interactive web applications and contributing to open-source projects.</p>
+  </section>
+
+  <section id="projects" class="hidden">
+    <h2>Projects</h2>
+    <div id="projects-list">
+      <div class="project">
+        <h3>Project 1</h3>
+        <p>A cool project description.</p>
+        <button onclick="alert('More details coming soon!')">View More</button>
+      </div>
+      <div class="project">
+        <h3>Project 2</h3>
+        <p>Another amazing project.</p>
+        <button onclick="alert('More details coming soon!')">View More</button>
+      </div>
+      <div class="project">
+        <h3>Project 3</h3>
+        <p>An innovative project idea.</p>
+        <button onclick="alert('More details coming soon!')">View More</button>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="hidden">
+    <h2>Contact</h2>
+    <p>Email: akshay@example.com</p>
+    <p>GitHub: <a href="https://github.com/BarathKannan2005" target="_blank">github.com/BarathKannan</a></p>
+    <p>LinkedIn: <a href="https://linkedin.com/in/BarathKannan2005" target="_blank">linkedin.com/in/BarathKannan</a></p>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 akshay. All rights reserved.</p>
+  </footer>
+
+  <script>
+    function navigate(sectionId) {
+      // Hide all sections
+      document.querySelectorAll("section").forEach((section) => {
+        section.classList.add("hidden");
+      });
+
+      // Show the selected section
+      document.getElementById(sectionId).classList.remove("hidden");
+    }
+  </script>
+</body>
+</html>
